@@ -1,7 +1,7 @@
 """
 Projekt munka
 Készítő:
-Koch Nikoletta
+Koch Nikolett -a :)
 Budai Ákos
 Buzási Gergő
 """
