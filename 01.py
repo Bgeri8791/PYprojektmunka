@@ -7,3 +7,5 @@ Buzási Gergő
 """
 
 Ákos van beakadva :D
+
+igy igaz
