@@ -15,7 +15,7 @@ def Mozi(teremdb,napibevetel):
                 rszam = random.randint(0, 1)
                 print(rszam, end=" ")
                 if(rszam == 1): # Ha 1-es a random szám akkor a napibevételhez adjon 2500Ft-ot. (Ha 0 akkor nem csinál semmit.)
-                    napibevetel += 2500
+                    napibevetel += 2000
                 oszlop=oszlop+1
             print("")
             sor= sor+1
