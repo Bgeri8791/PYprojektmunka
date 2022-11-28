@@ -26,5 +26,5 @@ if(valasznap =="Ma"):
         Moziimp.MaiMozi(teremdb,napibevetel)
 for i in Szuro:
     if(valasznap == i):
-        Moziimp.NapMozi(teremdb,napibevetel) 
+        Moziimp.NapMozi(teremdb,napibevetel,valasznap) 
 

@@ -1,5 +1,5 @@
 import random 
-def NapMozi(teremdb,napibevetel):
+def NapMozi(teremdb,napibevetel,valasznap):
     for i in range(3):
         #Itt írja ki a hányas terem aztán nőveli 1-el. Csak 3-ig megy el.
         print(f"Terem_{teremdb}")
