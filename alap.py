@@ -51,7 +51,7 @@ elif(valasz == 2):
     Mozi(teremdb,napibevetel)
 
 
-"""
+
 #Random 0-1 között írja ki a számokat 10x10-es oszlop és sorban.
 for i in range(3):
         print(f"Terem_{teremdb}")
@@ -71,5 +71,5 @@ for i in range(3):
 
 
 print(f"Napi bevétel:{napibevetel}Ft")
-"""  
+
 
