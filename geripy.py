@@ -1,0 +1,142 @@
+import random
+def Mozi():
+    with open("start.txt","w",encoding="utf-8") as kiirexport:
+        print("-------------------------------")
+        for i in range(1):
+            sor = 1
+            while sor <= 10:
+                oszlop = 1
+                while oszlop <=10:
+                    rszam = random.randint(0, 1)
+                    print(rszam, end="")
+                    print(str(rszam), end="", file=kiirexport)
+                    oszlop=oszlop+1
+                print("")
+                print("",file=kiirexport)
+                sor= sor+1
+            print(",",file=kiirexport)     
+            print("-------------------------------")
+def valasztas():
+    lista = []
+    with open("start.txt","r",encoding="utf-8") as beolvfile:
+        sor1 = beolvfile.readline()
+        lista.append(sor1)
+        sor2 = beolvfile.readline()
+        lista.append(sor2)
+        sor3 = beolvfile.readline()
+        lista.append(sor3)
+        sor4 = beolvfile.readline()
+        lista.append(sor4)
+        sor5 = beolvfile.readline()
+        lista.append(sor5)
+        sor6 = beolvfile.readline()
+        lista.append(sor6)
+        sor7 = beolvfile.readline()
+        lista.append(sor7)
+        sor8 = beolvfile.readline()
+        lista.append(sor8)
+        sor9 = beolvfile.readline()
+        lista.append(sor9)
+        sor10 = beolvfile.readline()
+        lista.append(sor10)
+    valaszsor = input("Válasz egy sor 1-10: ")
+    valaszszek = int(input("Válasz egy széket (0-9): "))
+    if(valaszsor == "1"):
+        if(sor1[valaszszek] == "0"):
+            #print(type(sor1[valaszszek]))
+            ujsor1 =sor1.replace(str(sor1[valaszszek]), "1",1)
+            print("Lefoglalva")
+            lista[0] = ujsor1     
+            kiiratas(lista)       
+        elif(sor1[valaszszek] == "1"):
+            print("A szék már foglalt")
+    elif(valaszsor == "2"):
+        if(sor2[valaszszek] == "0"):
+            ujsor2 = sor2.replace(str(sor2[valaszszek]), "1",1)
+            print("Lefoglalva")
+            lista[1] = ujsor2
+            kiiratas(lista)
+        elif(sor2[valaszszek] == "1"):
+            print("A szék már foglalt")
+    elif(valaszsor == "3"):
+        if(sor3[valaszszek] == "0"):
+            ujsor3 = sor3.replace(str(sor3[valaszszek]), "1",1)
+            print("Lefoglalva")
+            lista[2] = ujsor3
+            kiiratas(lista)
+        elif(sor3[valaszszek] == "1"):
+            print("A szék már foglalt")
+    elif(valaszsor == "4"):
+        if(sor4[valaszszek] == "0"):
+            #print(type(sor1[valaszszek]))
+            ujsor4 = sor4.replace(str(sor4[valaszszek]), "1",1)
+            print("Lefoglalva")
+            lista[3] = ujsor4
+            kiiratas(lista)
+        elif(sor4[valaszszek] == "1"):
+            print("A szék már foglalt")
+    elif(valaszsor == "5"):
+        if(sor5[valaszszek] == "0"):
+            #print(type(sor1[valaszszek]))
+            ujsor5 = sor5.replace(str(sor5[valaszszek]), "1",1)
+            print("Lefoglalva")
+            lista[4] = ujsor5
+            kiiratas(lista)
+        elif(sor5[valaszszek] == "1"):
+            print("A szék már foglalt")
+    elif(valaszsor == "6"):
+        if(sor6[valaszszek] == "0"):
+            #print(type(sor1[valaszszek]))
+            ujsor6 = sor6.replace(str(sor6[valaszszek]), "1",1)
+            print("Lefoglalva")
+            lista[5] = ujsor6
+            kiiratas(lista)
+        elif(sor6[valaszszek] == "1"):
+            print("A szék már foglalt")
+    elif(valaszsor == "7"):
+        if(sor7[valaszszek] == "0"):
+            #print(type(sor1[valaszszek]))
+            ujsor7 = sor7.replace(str(sor7[valaszszek]), "1",1)
+            print("Lefoglalva")
+            lista[6] = ujsor7
+            kiiratas(lista)
+        elif(sor7[valaszszek] == "1"):
+            print("A szék már foglalt")
+    elif(valaszsor == "8"):
+        if(sor8[valaszszek] == "0"):
+            #print(type(sor1[valaszszek]))
+            ujsor8 = sor8.replace(str(sor8[valaszszek]), "1",1)
+            print("Lefoglalva")
+            lista[7] = ujsor8
+            kiiratas(lista)
+        elif(sor8[valaszszek] == "1"):
+            print("A szék már foglalt")        
+    elif(valaszsor == "9"):
+        if(sor9[valaszszek] == "0"):
+            #print(type(sor1[valaszszek]))
+            ujsor9 = sor9.replace(str(sor9[valaszszek]), "1",1)
+            print("Lefoglalva")
+            lista[8] = ujsor9
+            kiiratas(lista)
+        elif(sor9[valaszszek] == "1"):
+            print("A szék már foglalt")        
+    elif(valaszsor == "10"):
+        if(sor10[valaszszek] == "0"):
+            #print(type(sor1[valaszszek]))
+            ujsor10 = sor10.replace(str(sor10[valaszszek]), "1",1)
+            print("Lefoglalva")
+            lista[9] = ujsor10
+            kiiratas(lista)
+        elif(sor10[valaszszek] == "1"):
+            print("A szék már foglalt")
+def kiiratas(lista):
+    with open("valasztottszek.txt","w", encoding="utf-8") as kiiratas:
+        for elem in lista:
+            kiiratas.write("%s"% elem)
+            
+            
+
+    
+
+Mozi()
+valasztas()

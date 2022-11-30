@@ -1,0 +1,8 @@
+Kiiratás---> minta: 
+01001
+01100
+
+Foglalás megkérdezése, és azt átváltoztatása 1-re majd kiiratás ujra.
+
+letárolni az sorokat
+és eldönti a sorban hányadikat szeretné kiválasztani

@@ -29,8 +29,17 @@ def Mozi(teremdb,napibevetel,szabhelydb):
   #Melyik teremben van a szabad hely?      
         
     print(f"A mai napi bevétel: {napibevetel} Ft\n") #Ki irja a napibevételt.
+
+
+def Hetibevetelszamitas(hetibevetel):
     with open("export.txt","w",encoding="utf-8") as kiirexport: #Ki iratja file-ba a napibevételt.
-        kiirexport.write(f"A mai napi bevétel: {napibevetel} Ft\n")
+        kiirexport.write(f"A heti bevétel: {hetibevetel} Ft\n")
+def napibevetelszamitas(napibevetel):
+    with open("export.txt","w",encoding="utf-8") as kiirexport: #Ki iratja file-ba a napibevételt.
+        kiirexport.write(f"A napi bevétel: {napibevetel} Ft\n")
+def Napszakibevetelszamitas(napszakibevetel):
+    with open("export.txt","w",encoding="utf-8") as kiirexport: #Ki iratja file-ba a napibevételt.
+        kiirexport.write(f"A napszaki bevétel: {napszakibevetel} Ft\n")
         
 import random
 """""
@@ -44,14 +53,18 @@ Napszak=input(print "Kérlek add meg a napszakot (reggel/ délben/este):")
 
 #Alap feladat 02
 Foglalo=int(input("Kérlek add meg a  foglalandó helyek számát:"))
-Nap=input("Kérlek add meg melyik napon szeretnél jönni (H-V) moziba:")
-Napszak=input("Kérlek add meg a napszakot (reggel/ délben/este):")
+Nap=input("Kérlek add meg melyik napon szeretnél jönni (Hetfő-Vasárnap) moziba:").capitalize()
+Napszak=input("Kérlek add meg a napszakot (reggel/ délben/este):").capitalize()
 
 #Alap változók.
 napibevetel = 0
 teremdb=1
 szabadhelyekdb= 0
-napok = ["Hétfő"]
+hetibevetel = 0
+napszakibevetel = 0
+
+Szuro=["Hétfő","Kedd","Szerda","Csütörtök","Péntek","Szombat","Vasárnap"]
+napszaklista=["Reggel","Dél","Este"]
 #példa:nap=H, napszak=este, 150
 #termek=[terem1, terem2, terem3]
 #terem=10 oszlop, 10 sor
@@ -59,9 +72,18 @@ napok = ["Hétfő"]
 
 if(0 >= Foglalo <= 101):
     print("Nem valid érték.")
-else:
-    if(Nap == "H"):
-        print("Hétfői nap")
-        Mozi(teremdb,napibevetel,szabadhelyekdb)
-    elif(Nap == "K"):
-        Mozi(teremdb,napibevetel,szabadhelyekdb)
+
+for vizsga in Szuro:
+    if(Nap == vizsga):
+        print(f"{vizsga}-i nap")
+        for vizsga2 in napszaklista:
+            if(Napszak == vizsga2):
+                print(f"{vizsga2}")
+                Mozi(teremdb,napibevetel,szabadhelyekdb)
+
+print("Melyik bevételt szeretnéd ki exportálni?\n Heti,napszaki,Napi.")
+lekervalasz = input("Válasz: ").capitalize()
+
+if(lekervalasz == "Mai"):
+    
+    napibevetelszamitas(napibevetel)

@@ -13,8 +13,8 @@ def Mozi(teremdb,napibevetel):
             oszlop = 1
             while oszlop <=10:
                 rszam = random.randint(0, 1)
-                print(rszam, end=" ")
-                if(rszam == 1): # Ha 1-es a random szám akkor a napibevételhez adjon 2500Ft-ot. (Ha 0 akkor nem csinál semmit.)
+                print(rszam, end="")
+                if(rszam == 1): # Ha 1-es a random szám akkor a napibevételhez adjon 2000Ft-ot. (Ha 0 akkor nem csinál semmit.)
                     napibevetel += 2000
                 oszlop=oszlop+1
             print("")
@@ -31,6 +31,7 @@ def Mozi(teremdb,napibevetel):
 print("Betöltse az előző lekérdezést?\nIgen-->1\nNem-->2\n")
 valasz= int(input("Választás: "))
 print("")
+
 
 #Alap változók.
 napibevetel = 0
@@ -51,7 +52,7 @@ elif(valasz == 2):
     Mozi(teremdb,napibevetel)
 
 
-
+"""
 #Random 0-1 között írja ki a számokat 10x10-es oszlop és sorban.
 for i in range(3):
         print(f"Terem_{teremdb}")
@@ -71,5 +72,5 @@ for i in range(3):
 
 
 print(f"Napi bevétel:{napibevetel}Ft")
-
+"""
 
