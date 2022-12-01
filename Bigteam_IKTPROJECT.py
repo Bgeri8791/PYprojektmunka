@@ -1,4 +1,9 @@
 import random
+"""
+Készítette:Buzási Gergő
+Osztály: 1/13SZFT
+Dátum:
+"""
 def Mozi():
     with open("start.txt","w",encoding="utf-8") as kiirexport:
         print("-------------------------------")
@@ -220,7 +225,20 @@ def mailekerdezes():
                     maibevetel+=2000
         
     print(f"A mai bevétel:{maibevetel}")
+"""
+Készítette:
+Osztály: 1/13SZFT
+Dátum:
+"""
+#írjátok müködő programokat
+"""
+Készítette:
+Osztály: 1/13SZFT
+Dátum:
+"""
+#írjátok müködő programokat
 
+#main
 Mozi()
 teremelosztas()
 valasztas()
