@@ -5,9 +5,12 @@ Osztály: 1/13SZFT
 Dátum:
 """
 def Mozi():
+    teremdb = 1
     with open("start.txt","w",encoding="utf-8") as kiirexport:
         print("-------------------------------")
         for i in range(3):
+            print(f"Terem_{teremdb}")
+            teremdb+=1
             sor = 1
             while sor <= 10:
                 oszlop = 1
@@ -44,12 +47,14 @@ def valasztas():
         lista.append(sor9)
         sor10 = beolvfile.readline()
         lista.append(sor10)
+    
+    fodb = int(input("Hány főre szeretne foglalni?\nVálasz: "))
     valaszsor = input("Válasz egy sor 1-10: ")
     valaszszek = int(input("Válasz egy széket (0-9): "))
     if(valaszsor == "1"):
         if(sor1[valaszszek] == "0"):
             #print(type(sor1[valaszszek]))
-            ujsor1 =sor1.replace(str(sor1[valaszszek]), "1",1)
+            ujsor1 =sor1.replace(str(sor1[valaszszek]), "1",fodb)
             print("Lefoglalva")
             lista[0] = ujsor1     
             kiiratas(lista)       
@@ -57,7 +62,7 @@ def valasztas():
             print("A szék már foglalt")
     elif(valaszsor == "2"):
         if(sor2[valaszszek] == "0"):
-            ujsor2 = sor2.replace(str(sor2[valaszszek]), "1",1)
+            ujsor2 = sor2.replace(str(sor2[valaszszek]), "1",fodb)
             print("Lefoglalva")
             lista[1] = ujsor2
             kiiratas(lista)
@@ -65,7 +70,7 @@ def valasztas():
             print("A szék már foglalt")
     elif(valaszsor == "3"):
         if(sor3[valaszszek] == "0"):
-            ujsor3 = sor3.replace(str(sor3[valaszszek]), "1",1)
+            ujsor3 = sor3.replace(str(sor3[valaszszek]), "1",fodb)
             print("Lefoglalva")
             lista[2] = ujsor3
             kiiratas(lista)
@@ -74,7 +79,7 @@ def valasztas():
     elif(valaszsor == "4"):
         if(sor4[valaszszek] == "0"):
             #print(type(sor1[valaszszek]))
-            ujsor4 = sor4.replace(str(sor4[valaszszek]), "1",1)
+            ujsor4 = sor4.replace(str(sor4[valaszszek]), "1",fodb)
             print("Lefoglalva")
             lista[3] = ujsor4
             kiiratas(lista)
@@ -83,7 +88,7 @@ def valasztas():
     elif(valaszsor == "5"):
         if(sor5[valaszszek] == "0"):
             #print(type(sor1[valaszszek]))
-            ujsor5 = sor5.replace(str(sor5[valaszszek]), "1",1)
+            ujsor5 = sor5.replace(str(sor5[valaszszek]), "1",fodb)
             print("Lefoglalva")
             lista[4] = ujsor5
             kiiratas(lista)
@@ -92,7 +97,7 @@ def valasztas():
     elif(valaszsor == "6"):
         if(sor6[valaszszek] == "0"):
             #print(type(sor1[valaszszek]))
-            ujsor6 = sor6.replace(str(sor6[valaszszek]), "1",1)
+            ujsor6 = sor6.replace(str(sor6[valaszszek]), "1",fodb)
             print("Lefoglalva")
             lista[5] = ujsor6
             kiiratas(lista)
@@ -101,7 +106,7 @@ def valasztas():
     elif(valaszsor == "7"):
         if(sor7[valaszszek] == "0"):
             #print(type(sor1[valaszszek]))
-            ujsor7 = sor7.replace(str(sor7[valaszszek]), "1",1)
+            ujsor7 = sor7.replace(str(sor7[valaszszek]), "1",fodb)
             print("Lefoglalva")
             lista[6] = ujsor7
             kiiratas(lista)
@@ -110,7 +115,7 @@ def valasztas():
     elif(valaszsor == "8"):
         if(sor8[valaszszek] == "0"):
             #print(type(sor1[valaszszek]))
-            ujsor8 = sor8.replace(str(sor8[valaszszek]), "1",1)
+            ujsor8 = sor8.replace(str(sor8[valaszszek]), "1",fodb)
             print("Lefoglalva")
             lista[7] = ujsor8
             kiiratas(lista)
@@ -119,7 +124,7 @@ def valasztas():
     elif(valaszsor == "9"):
         if(sor9[valaszszek] == "0"):
             #print(type(sor1[valaszszek]))
-            ujsor9 = sor9.replace(str(sor9[valaszszek]), "1",1)
+            ujsor9 = sor9.replace(str(sor9[valaszszek]), "1",fodb)
             print("Lefoglalva")
             lista[8] = ujsor9
             kiiratas(lista)
@@ -128,7 +133,7 @@ def valasztas():
     elif(valaszsor == "10"):
         if(sor10[valaszszek] == "0"):
             #print(type(sor1[valaszszek]))
-            ujsor10 = sor10.replace(str(sor10[valaszszek]), "1",1)
+            ujsor10 = sor10.replace(str(sor10[valaszszek]), "1",fodb)
             print("Lefoglalva")
             lista[9] = ujsor10
             kiiratas(lista)
@@ -224,19 +229,19 @@ def mailekerdezes():
                 if(i == "1"):
                     maibevetel+=2000
         
-    print(f"A mai bevétel:{maibevetel}")
+    print(f"A 3 terem mai bevétel:{maibevetel}")
 """
 Készítette:
 Osztály: 1/13SZFT
 Dátum:
 """
-#írjátok müködő programokat
+#Másoljátok át müködő programokat
 """
 Készítette:
 Osztály: 1/13SZFT
 Dátum:
 """
-#írjátok müködő programokat
+#Másoljátok át müködő programokat
 
 #main
 Mozi()
