@@ -222,12 +222,77 @@ def mailekerdezes():
                     maibevetel+=2000
         
     print(f"A mai bevétel:{maibevetel}")
+def hetszures():
+    with open("hetvalasz.txt","w",encoding="utf-8") as kiirexport:
+        print("-------------------------------")
+        print("Heti lekérdezés:")
+        for i in range(3):
+            sor = 1
+            while sor <= 10:
+                oszlop = 1
+                while oszlop <=10:
+                    rszam = random.randint(0, 1)
+                    print(str(rszam), end="", file=kiirexport)
+                    oszlop=oszlop+1
+                print("",file=kiirexport)
+                sor= sor+1
+            print("",file=kiirexport)
+    hetlista = []
+    hetibevetel = 0
+    hetvalasz = input("Kérlek adj meg egy napot.\nVálasz: ").capitalize()
+    with open("hetvalasz.txt","r",encoding="utf-8") as beo:
+        for elem in beo:
+            for i in elem:
+                if(i == "1"):
+                    hetibevetel += 2000
+            hetlista.append(elem)
+    if(hetvalasz=="Hétfő"):
+        with open("hetfo.txt","w",encoding="utf-8") as ki:
+            for elem in hetlista:
+                    ki.write("%s"% elem)
+            ki.write(str(hetibevetel))
+        print(f"{hetvalasz} ki exportálva.")
+    elif(hetvalasz=="Kedd"):
+        with open("kedd.txt","w",encoding="utf-8") as ki:
+            for elem in hetlista:
+                ki.write("%s"% elem)
+            ki.write(str(hetibevetel))
+        print(f"{hetvalasz} ki exportálva.")
+    elif(hetvalasz=="Szerda"):
+        with open("szerda.txt","w",encoding="utf-8") as ki:
+            for elem in hetlista:
+                ki.write("%s"% elem)
+            ki.write(str(hetibevetel))
+        print(f"{hetvalasz} ki exportálva.")
+    elif(hetvalasz=="Csütörtök"):
+        with open("csutortok.txt","w",encoding="utf-8") as ki:
+            for elem in hetlista:
+                ki.write("%s"% elem)
+            ki.write(str(hetibevetel))
+        print(f"{hetvalasz} ki exportálva.")
+    elif(hetvalasz=="Péntek"):
+        with open("pentek.txt","w",encoding="utf-8") as ki:
+            for elem in hetlista:
+                ki.write("%s"% elem)
+            ki.write(str(hetibevetel))
+        print(f"{hetvalasz} ki exportálva.")
+    elif(hetvalasz=="Szombat"):
+        with open("szombat.txt","w",encoding="utf-8") as ki:
+            for elem in hetlista:
+                ki.write("%s"% elem)
+            ki.write(str(hetibevetel))
+        print(f"{hetvalasz} ki exportálva.")
+    elif(hetvalasz=="Vasárnap"):
+        with open("vasarnap.txt","w",encoding="utf-8") as ki:
+            for elem in hetlista:
+                ki.write("%s"% elem)
+            ki.write(str(hetibevetel))
+        print(f"{hetvalasz} ki exportálva.")
+    else:
+        print("Nincs ilyen nap.")
 
-
-
-
-#Mozi()
-#teremelosztas()
+Mozi()
+teremelosztas()
 valasztas()
-#mailekerdezes()
-
+mailekerdezes()
+hetszures()
