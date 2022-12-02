@@ -2,7 +2,8 @@ import random
 """
 Készítette:Buzási Gergő
 Osztály: 1/13SZFT
-Dátum:
+Dátum:2022.11.30
+utolsó verzió:2022.12.02
 """
 def Mozi():
     teremdb = 1
@@ -247,58 +248,66 @@ def hetszures():
             print("",file=kiirexport)
     hetlista = []
     hetibevetel = 0
-    hetvalasz = input("Kérlek adj meg egy napot.\nVálasz: ").capitalize()
     with open("hetvalasz.txt","r",encoding="utf-8") as beo:
         for elem in beo:
             for i in elem:
                 if(i == "1"):
                     hetibevetel += 2000
             hetlista.append(elem)
-    if(hetvalasz=="Hétfő"):
-        with open("hetfo.txt","w",encoding="utf-8") as ki:
-            for elem in hetlista:
+    tovabb = True
+    while tovabb:
+        print("Hétfő,Kedd,Szerda,Csütörtök,Péntek,Szombat,Vasárnap")
+        hetvalasz = input("Kérem válaszon egy napot.\nVálasz: ").capitalize()
+        if(hetvalasz=="Hétfő" or hetvalasz=="Hetfo"):
+            with open("hetfo.txt","w",encoding="utf-8") as ki:
+                for elem in hetlista:
+                        ki.write("%s"% elem)
+                ki.write(str(hetibevetel))
+            print(f"{hetvalasz} ki exportálva.")
+        elif(hetvalasz=="Kedd"):
+            with open("kedd.txt","w",encoding="utf-8") as ki:
+                for elem in hetlista:
                     ki.write("%s"% elem)
-            ki.write(str(hetibevetel))
-        print(f"{hetvalasz} ki exportálva.")
-    elif(hetvalasz=="Kedd"):
-        with open("kedd.txt","w",encoding="utf-8") as ki:
-            for elem in hetlista:
-                ki.write("%s"% elem)
-            ki.write(str(hetibevetel))
-        print(f"{hetvalasz} ki exportálva.")
-    elif(hetvalasz=="Szerda"):
-        with open("szerda.txt","w",encoding="utf-8") as ki:
-            for elem in hetlista:
-                ki.write("%s"% elem)
-            ki.write(str(hetibevetel))
-        print(f"{hetvalasz} ki exportálva.")
-    elif(hetvalasz=="Csütörtök"):
-        with open("csutortok.txt","w",encoding="utf-8") as ki:
-            for elem in hetlista:
-                ki.write("%s"% elem)
-            ki.write(str(hetibevetel))
-        print(f"{hetvalasz} ki exportálva.")
-    elif(hetvalasz=="Péntek"):
-        with open("pentek.txt","w",encoding="utf-8") as ki:
-            for elem in hetlista:
-                ki.write("%s"% elem)
-            ki.write(str(hetibevetel))
-        print(f"{hetvalasz} ki exportálva.")
-    elif(hetvalasz=="Szombat"):
-        with open("szombat.txt","w",encoding="utf-8") as ki:
-            for elem in hetlista:
-                ki.write("%s"% elem)
-            ki.write(str(hetibevetel))
-        print(f"{hetvalasz} ki exportálva.")
-    elif(hetvalasz=="Vasárnap"):
-        with open("vasarnap.txt","w",encoding="utf-8") as ki:
-            for elem in hetlista:
-                ki.write("%s"% elem)
-            ki.write(str(hetibevetel))
-        print(f"{hetvalasz} ki exportálva.")
-    else:
-        print("Nincs ilyen nap.")
-
+                ki.write(str(hetibevetel))
+            print(f"{hetvalasz} ki exportálva.")
+        elif(hetvalasz=="Szerda"):
+            with open("szerda.txt","w",encoding="utf-8") as ki:
+                for elem in hetlista:
+                    ki.write("%s"% elem)
+                ki.write(str(hetibevetel))
+            print(f"{hetvalasz} ki exportálva.")
+        elif(hetvalasz=="Csütörtök" or hetvalasz=="Csutortok"):
+            with open("csutortok.txt","w",encoding="utf-8") as ki:
+                for elem in hetlista:
+                    ki.write("%s"% elem)
+                ki.write(str(hetibevetel))
+            print(f"{hetvalasz} ki exportálva.")
+        elif(hetvalasz=="Péntek" or hetvalasz=="Pentek"):
+            with open("pentek.txt","w",encoding="utf-8") as ki:
+                for elem in hetlista:
+                    ki.write("%s"% elem)
+                ki.write(str(hetibevetel))
+            print(f"{hetvalasz} ki exportálva.")
+        elif(hetvalasz=="Szombat"):
+            with open("szombat.txt","w",encoding="utf-8") as ki:
+                for elem in hetlista:
+                    ki.write("%s"% elem)
+                ki.write(str(hetibevetel))
+            print(f"{hetvalasz} ki exportálva.")
+        elif(hetvalasz=="Vasárnap" or hetvalasz=="Vasarnap"):
+            with open("vasarnap.txt","w",encoding="utf-8") as ki:
+                for elem in hetlista:
+                    ki.write("%s"% elem)
+                ki.write(str(hetibevetel))
+            print(f"{hetvalasz} ki exportálva.")
+        else:
+            print("Nincs ilyen nap.")
+        
+        folytatja = input("Ki szeretne még exportálni?\n(Igen/Nem): ").capitalize()
+        if (folytatja == 'Igen'):
+            tovabb = True
+        else:
+            tovabb = False
 """
 Készítette:
 Osztály: 1/13SZFT
@@ -316,6 +325,7 @@ Dátum:
 Mozi()
 teremelosztas()
 valasztas()
+#Szűrsek
 mailekerdezes()
 hetszures()
 
