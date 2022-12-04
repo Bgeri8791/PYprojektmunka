@@ -312,7 +312,8 @@ def hetszures():
 Készítette:Budai Ákos
 Osztály: 1/13SZFT
 Dátum:2022 12 03
-"""
+
+
 def napibevetel():
     with open("kedd.txt","r",encoding="utf-8") as beolvfile:
         szamlalo = 0
@@ -320,7 +321,50 @@ def napibevetel():
             szamlalo += len(sor) - len(sor.replace('1', ''))
     print(f"A mai napi bevétel: {szamlalo*2000} Ft\n")
 napibevetel()
+
+
+
+def hetibevetel():
+    adat = []
+    with open("hetfo.txt", "r",encoding="utf-8") as beolvfile1:
+        for sor in beolvfile1:
+            sor = beolvfile1.readline()
+        adat.append(sor)
+
+    with open("kedd.txt", "r",encoding="utf-8") as beolvfile2:
+        for sor in beolvfile2:
+            sor = beolvfile2.readline()
+        adat.append(sor)
+
+    with open("szerda.txt", "r",encoding="utf-8") as beolvfile3:
+        for sor in beolvfile3:
+            sor = beolvfile3.readline()
+        adat.append(sor)
+
+    with open("csutortok.txt", "r",encoding="utf-8") as beolvfile4:
+        for sor in beolvfile4:
+            sor = beolvfile4.readline()
+        adat.append(sor)
+
+    with open("pentek.txt", "r",encoding="utf-8") as beolvfile5:
+        for sor in beolvfile5:
+            sor = beolvfile5.readline()
+        adat.append(sor)
+
+    with open("szombat.txt", "r",encoding="utf-8") as beolvfile6:
+        for sor in beolvfile6:
+            sor = beolvfile6.readline()
+        adat.append(sor)
+
+    with open("vasarnap.txt", "r",encoding="utf-8") as beolvfile7:
+        for sor in beolvfile7:
+            sor = beolvfile7.readline()
+        adat.append(sor)
+    print(f"A heti bevétel: {adat} Ft\n")
+hetibevetel()
 """
+
+
 Készítette:
 Osztály: 1/13SZFT
 Dátum:
