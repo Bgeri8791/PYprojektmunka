@@ -308,11 +308,14 @@ def hetszures():
             tovabb = True
         else:
             tovabb = False
+
+
+
 """
 Készítette:Budai Ákos
 Osztály: 1/13SZFT
 Dátum:2022 12 03
-
+"""
 
 def napibevetel():
     with open("kedd.txt","r",encoding="utf-8") as beolvfile:
@@ -362,9 +365,9 @@ def hetibevetel():
         adat.append(sor)
     print(f"A heti bevétel: {adat} Ft\n")
 hetibevetel()
+
+
 """
-
-
 Készítette:
 Osztály: 1/13SZFT
 Dátum:
