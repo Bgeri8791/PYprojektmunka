@@ -323,10 +323,6 @@ def napibevetel():
         for sor in beolvfile:
             szamlalo += len(sor) - len(sor.replace('1', ''))
     print(f"A mai napi bevétel: {szamlalo*2000} Ft\n")
-napibevetel()
-
-
-
 def hetibevetel():
     adat = []
     with open("hetfo.txt", "r",encoding="utf-8") as beolvfile1:
@@ -364,7 +360,7 @@ def hetibevetel():
             sor = beolvfile7.readline()
         adat.append(sor)
     print(f"A heti bevétel: {adat} Ft\n")
-hetibevetel()
+
 
 
 """
@@ -381,4 +377,5 @@ valasztas()
 #Szűrsek
 mailekerdezes()
 hetszures()
-
+napibevetel()
+hetibevetel()
