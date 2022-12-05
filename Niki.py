@@ -13,7 +13,6 @@ def niki():
     szo=0
     v=0
     
-    print("Hétfő, Kedd, Szerda, Csütörtök, Péntek, Szombat, Vasárnap")
     napvalaszto=input(("Kérlek add meg melyik napi bevételt szeretnéd lekérdezni (Hétfő- Vasárnap):")).capitalize()
     if(napvalaszto=="Hétfő" or napvalaszto=="Hetfo"):
         with open("hetfo.txt","r",encoding="utf-8") as H:
