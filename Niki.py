@@ -4,7 +4,7 @@
 
 #Alap feladat 02: Napi bevétel lekérdezése, foglalás után kiiratni a fájlba, előző állapot betöltése(olvasás) vagy üres fájl (írás), függvényekben és eljárásokban
 napvalaszto=[Hétfő, Kedd, Szerda, Csütörtök, Péntek, Szombat, Vasárnap]
-napvalaszto=input((print "Kérlek add meg melyik napi bevételt szeretnéd lekérdezni (Hétfő- Vasárnap):")).capitalize()
+napvalaszto=input(print "Kérlek add meg melyik napi bevételt szeretnéd lekérdezni (Hétfő- Vasárnap):").capitalize()
         if(napvalaszto=="Hétfő" or napvalaszto=="Hetfo"):
             with open("hetfo.txt","r",encoding="utf-8") as H:
                 for elem in H:
@@ -41,7 +41,7 @@ napvalaszto=input((print "Kérlek add meg melyik napi bevételt szeretnéd leké
                 for elem in P:
             for i in elem:
                 if(i == "1"):
-                    P += 2000
+                    P+= 2000
             print(f"{P} Forint a pénteki nap bevétele.")
             
         elif(hetvalasz=="Szombat"):
