@@ -1,7 +1,7 @@
 #Készítette: Koch Nikolett
 #osztály: 1/13SZFT
 #Dátum: 2022.12.05
-#
+
 
 
 def niki():
@@ -67,3 +67,4 @@ def niki():
             else:
                 print("Nincs ilyen nap.")
 niki()
+
