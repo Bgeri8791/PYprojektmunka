@@ -1,16 +1,7 @@
 #Készítette: Koch Nikolett
-#Osztály: 1/13SZFT
-#Dátum: 2022.12.05
-
-#Alap feladat 02: Napi bevétel lekérdezése, foglalás után kiiratni a fájlba, előző állapot betöltése(olvasás) vagy üres fájl (írás), függvényekben és eljárásokban
-def niki():
-    
-    h = 0
-    k = 0
-    print("Hétfő, Kedd, Szerda, Csütörtök, Péntek, Szombat, Vasárnap")
 #osztály: 1/13SZFT
 #Dátum: 2022.12.05
-
+#
 
 
 def niki():
@@ -36,78 +27,43 @@ def niki():
                 for i in elem:
                     if(i == "1"):
                         k += 2000
-
-        print(f"{K} Forint a keddi nap bevétele.")
-
         print(f"{k} Forint a keddi nap bevétele.")
-
     elif(napvalaszto=="Szerda"):
         with open("szerda.txt","r",encoding="utf-8") as Sz:
             for elem in Sz:
                 for i in elem:
                     if(i == "1"):
-
-                        Sz += 2000
-        print(f"{Sz} Forint a szerdai nap bevétele.")
-
                         sz += 2000
         print(f"{sz} Forint a szerdai nap bevétele.")
-
     elif(napvalaszto=="Csütörtök" or napvalaszto=="Csutortok"):
         with open("csutortok.txt","r",encoding="utf-8") as Cs:
             for elem in Cs:
                 for i in elem:
                     if(i == "1"):
-
-                        H += 2000
-        print(f"{H} Forint a csütörtöki nap bevétele.")
-
                         cs += 2000
         print(f"{cs} Forint a csütörtöki nap bevétele.")
->>>>>>> e356067a15209f4fcccd87029af9178dd3d96579
     elif(napvalaszto=="Péntek" or napvalaszto=="Pentek"):
         with open("pentek.txt","r",encoding="utf-8") as P:
             for elem in P:
                 for i in elem:
                     if(i == "1"):
                         P += 2000
-        print(f"{P} Forint a pénteki nap bevétele.")
-
         print(f"{p} Forint a pénteki nap bevétele.")
     elif(napvalaszto=="Szombat"):
         with open("szombat.txt","r",encoding="utf-8") as Szo:
             for elem in Szo:
                 for i in elem:
                     if(i == "1"):
-
-                        Szo += 2000
-        print(f"{Szo} Forint a szombati nap bevétele.")
-
                         szo += 2000
         print(f"{szo} Forint a szombati nap bevétele.")
->>>>>>> e356067a15209f4fcccd87029af9178dd3d96579
     elif(napvalaszto=="Vasárnap" or napvalaszto=="Vasarnap"):
         with open("csutortok.txt","r",encoding="utf-8") as V:
             for elem in V:
                 for i in elem:
                     if(i == "1"):
-
-                        V += 2000
-
-                print(f"{V} Forint a szombati nap bevétele.")
-                
-            else:
-                print("Nincs ilyen nap.")
-niki()
-
-        print(f"{V} Forint a szombati nap bevétele.")          
-    else:
-        print("Nincs ilyen nap.")
-niki()
->>>>>>> 2634aca (nikivalt)
-=======
                         v += 2000
                 print(f"{v} Forint a szombati nap bevétele.")
                 
             else:
                 print("Nincs ilyen nap.")
+niki()
