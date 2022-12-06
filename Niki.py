@@ -3,7 +3,7 @@
 #Dátum: 2022.12.05
 
 
-
+#Alap feladat 02: Napi bevétel lekérdezése, foglalás után kiiratni a fájlba, előző állapot betöltése(olvasás) vagy üres fájl (írás), függvényekben és eljárásokban
 def niki():
     h=0
     k=0
