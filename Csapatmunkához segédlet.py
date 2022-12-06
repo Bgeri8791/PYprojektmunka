@@ -29,7 +29,16 @@ Csapatmunkához segédlet
     A hét melyik napján szeretnél moziba jönni? Hétfő
     Hányan jönnétek a moziba? 5
     
-    + Sikeres foglalás. Foglalási információ: Terem száma: 3, Hely(ek) száma: 2. sor 2,3,4,5,6 szék 
+    + Sikeres foglalás. Foglalási információ: Terem száma: 3, Hely(ek) száma: 2. sor 2,3,4,5,6 szék
+    -Sajnáljuk, de a kiválasztott időszakban csak  2 szabad helyünk van, szeretnéd lefoglalni? Igen
+         Sikeres foglalás. Terem száma: 2, Hely(ek) száma: 8. sor 2,3 szék
+    -Sajnáljuk, de a kiválasztott időszakban csak  2 szabad helyünk van, szeretnéd lefoglalni? Nem
+        Szeretnél foglalni másik időszakra? Igen
+            Melyik napszakban szeretnél moziba jönni?
+            A hét melyik napján szeretnél moziba jönni? 
+            Hányan jönnétek a moziba? 
+        Szeretnél foglalni másik időszakra? Nem
+            Köszönjük az érdeklődésed! Várunk vissza!
     - Sajnáljuk, de a kiválasztott időszakban teltházunk van.Kérlek válassz másik napot!
         Szeretnél foglalni másik időszakra? Igen
             Melyik napszakban szeretnél moziba jönni?
