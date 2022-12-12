@@ -7,6 +7,7 @@ Csapatmunkához segédlet
  A, napszak szerint ("Melyik napszakban szeretnél moziba jönni?")
  B, nap szerint ("A hét melyik napján szeretnél moziba jönni?")
  C, hely darabszám szerint ("Hányan jönnétek a moziba?")
+ D, hét kiválastása alapján ("Melyik héten szeretnétek jönni?")
  
 3, Visszajelzés
     A, Sikeres foglalás és terem megjelenítés, ahol szabad hely van, a helyszámmal együtt  ("Sikeres foglalás. Foglalási információ: Terem száma: x, Hely(ek) száma: y")
