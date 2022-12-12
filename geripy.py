@@ -300,8 +300,8 @@ def hetszures():
         else:
             tovabb = False
             
-#Mozi()
-#teremelosztas()
-#valasztas()
-#mailekerdezes()
+Mozi()
+teremelosztas()
+valasztas()
+mailekerdezes()
 hetszures()
